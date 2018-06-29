@@ -1,0 +1,11 @@
+\section{Modelos de Regresión}
+
+Finalmente, vemos los modelos propuestos. Primero sin la libertad mundial como independiente, y luego con está. Los resultados se muestran en la Tabla %\ref{regresiones} de la página \pageref{regresiones}.
+
+
+
+
+
+Como se vió en la Tabla %\ref{regresiones}, cuando está presente el \emph{indice de libertad mundial}, el \emph{índice de libertad de prensa} pierde significancia.
+
+\endinput

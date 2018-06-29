@@ -1,0 +1,23 @@
+\section{Exploración Bivariada}
+
+En este trabajo estamos interesados en el impacto de los otros indices en el nivel de Democracia. Veamos las relaciones bivariadas que tiene esta variable con todas las demás:
+
+
+
+
+
+Veamos la correlación entre las variables independientes:
+
+
+
+
+Lo visto en la Tabla %\ref{corrTableX} se refuerza claramente en la Figura \ref{corrPlotX}.
+
+
+
+
+
+
+
+
+\endinput

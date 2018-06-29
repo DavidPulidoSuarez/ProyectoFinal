@@ -1,0 +1,43 @@
+\section{Exploración Univariada}\label{univariada}
+
+En esta sección exploro cada índice. En esta sección exploro cada índice. En esta sección exploro cada índice. En esta sección exploro cada índice. En esta sección exploro cada índice. En esta sección exploro cada índice. En esta sección exploro cada índice. En esta sección exploro cada índice. En esta sección exploro cada índice.
+
+
+
+<<getData, echo=FALSE>>=
+# carga de datos
+filename="colombia.csv"
+colb=read.csv(filename, stringsAsFactors = FALSE)
+str(colb)
+@
+
+veamos que pasa aqui
+<<summaryDatos, echo=FALSE>>=
+summary(colb)
+@
+histograma 1 
+<<summaryDatos, echo=FALSE>>=
+hist(colb$IDH)
+@
+histograma 2
+<<summaryDatos, echo=FALSE>>=
+hist(colb$Poblacion.Cabecera)
+@
+histograma 3
+<<summaryDatos, echo=FALSE>>=
+hist(colb$Poblacion.Resto)
+@
+Para conocer el comportamiento de las variables se ha preparado la Tabla %\ref{Tfrecuencias}, donde se describe la distribución de las modalidades de cada variable. Los números representan la situación de algun país en ese indicador, donde el mayor valor numérico es la mejor situación.
+
+<<rehacerhistogramas, echo=FALSE>>=
+colb$cabeLog=log(colb$Poblacion.Cabecera)
+colb$restoLog=log(colb$Poblacion.Resto)
+
+hist(colb$cabeLog)
+hist(colb$restoLog)
+@
+
+
+
+
+\endinput
