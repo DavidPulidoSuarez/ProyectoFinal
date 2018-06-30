@@ -1,47 +1,49 @@
+
+
 \section{Exploración Univariada}\label{univariada}
 
 En esta sección exploro cada índice. En esta sección exploro cada índice. En esta sección exploro cada índice. En esta sección exploro cada índice. En esta sección exploro cada índice. En esta sección exploro cada índice. En esta sección exploro cada índice. En esta sección exploro cada índice. En esta sección exploro cada índice.
 
+% Table created by stargazer v.5.2.2 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
+% Date and time: vie., jun. 29, 2018 - 7:29:37 p.m.
+\begin{table}[!htbp] \centering 
+  \caption{Medidas estadísticas} 
+  \label{stats} 
+\begin{tabular}{@{\extracolsep{5pt}}lccccccc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+Statistic & \multicolumn{1}{c}{N} & \multicolumn{1}{c}{Mean} & \multicolumn{1}{c}{St. Dev.} & \multicolumn{1}{c}{Min} & \multicolumn{1}{c}{Pctl(25)} & \multicolumn{1}{c}{Pctl(75)} & \multicolumn{1}{c}{Max} \\ 
+\hline \\[-1.8ex] 
+IDH & 32 & 0.802 & 0.042 & 0.691 & 0.768 & 0.834 & 0.879 \\ 
+Poblacion.Cabecera & 32 & 1,196,730.000 & 1,982,287.000 & 13,090 & 234,624.2 & 970,925.2 & 10,070,801 \\ 
+Poblacion.Resto & 32 & 360,590.300 & 331,887.600 & 21,926 & 96,968.8 & 487,529.5 & 1,428,858 \\ 
+Poblacion.Total & 32 & 1,557,320.000 & 2,202,522.000 & 43,446 & 371,160.8 & 1,512,087 & 10,985,285 \\ 
+\hline \\[-1.8ex] 
+\end{tabular} 
+\end{table} 
+\begin{figure}[h]
+\centering
+\includegraphics{univariada-summaryDatos}
+\caption{Histograma del IDH en Colombia para los 32 departamentos}
+\label{barplot1}
+\end{figure}
 
-
-\begin{Schunk}
-\begin{Soutput}
-'data.frame':	32 obs. of  6 variables:
- $ IDH               : num  0.879 0.867 0.865 0.849 0.842 0.839 0.837 0.835 0.834 0.832 ...
- $ Departamento      : chr  "Santander" "Casanare" "Valle del Cauca" "Antioquia" ...
- $ Poblacion.Cabecera: int  1587972 281548 4169553 5262172 742812 761658 10070801 2438533 56487 506254 ...
- $ Poblacion.Resto   : int  502867 93701 586560 1428858 539251 206109 914484 107391 21926 68756 ...
- $ Poblacion.Total   : int  2090839 375249 4756113 6691030 1282063 967767 10985285 2545924 78413 575010 ...
- $ DepartamentoNorm  : chr  "Santander" "Casanare" "Valle del Cauca" "Antioquia" ...
-\end{Soutput}
-\end{Schunk}
-
-veamos que pasa aqui
-\begin{Schunk}
-\begin{Soutput}
-      IDH         Departamento       Poblacion.Cabecera Poblacion.Resto  
- Min.   :0.6910   Length:32          Min.   :   13090   Min.   :  21926  
- 1st Qu.:0.7680   Class :character   1st Qu.:  234624   1st Qu.:  96969  
- Median :0.8040   Mode  :character   Median :  717197   Median : 268112  
- Mean   :0.8018                      Mean   : 1196730   Mean   : 360590  
- 3rd Qu.:0.8343                      3rd Qu.:  970925   3rd Qu.: 487530  
- Max.   :0.8790                      Max.   :10070801   Max.   :1428858  
- Poblacion.Total    DepartamentoNorm  
- Min.   :   43446   Length:32         
- 1st Qu.:  371161   Class :character  
- Median : 1028429   Mode  :character  
- Mean   : 1557320                     
- 3rd Qu.: 1512087                     
- Max.   :10985285                     
-\end{Soutput}
-\end{Schunk}
-histograma 1 
-histograma 2
-histograma 3
+\begin{figure}[h]
+\centering
+\includegraphics{univariada-summaryDatos}
+\caption{Histograma de la poblacion en Colombia para los departamentos de cabecera}
+\label{barplot2}
+\end{figure}
+\begin{figure}[h]
+\centering
+\includegraphics{univariada-summaryDatos}
+\caption{Histograma de la poblacion en Colombia para los otros departamentos}
+\label{barplot3}
+\end{figure}
 Para conocer el comportamiento de las variables se ha preparado la Tabla %\ref{Tfrecuencias}, donde se describe la distribución de las modalidades de cada variable. Los números representan la situación de algun país en ese indicador, donde el mayor valor numérico es la mejor situación.
-
-
-
-
-
-\endinput
+\begin{figure}[h]
+\centering
+\includegraphics{univariada-rehacerhistogramas}
+\caption{Histograma transformado de la poblacion en Colombia para los 32 departamentos}
+\label{barplot4}
+\end{figure}

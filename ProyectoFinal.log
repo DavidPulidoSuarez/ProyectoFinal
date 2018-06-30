@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.6.28)  29 JUN 2018 17:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.6.28)  29 JUN 2018 19:29
 entering extended mode
 **./ProyectoFinal.tex
 (ProyectoFinal.tex
@@ -741,47 +741,75 @@ File: t1aett.fd 1997/11/16 Font definitions for T1/aett.
 
 {C:/Users/david/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] (univariada
 .tex
-LaTeX Font Info:    Try loading font information for TS1+aett on input line 9.
+Overfull \hbox (146.65771pt too wide) in paragraph at lines 12--23
+ [][] 
+ []
 
-(D:/PROGRA~2/R-35~1.0/share/texmf/tex/latex\ts1aett.fd
-File: ts1aett.fd 
+<univariada-summaryDatos.pdf, id=14, 433.62pt x 433.62pt>
+File: univariada-summaryDatos.pdf Graphic file (type pdf)
+<use univariada-summaryDatos.pdf>
+Package pdftex.def Info: univariada-summaryDatos.pdf  used on input line 26.
+(pdftex.def)             Requested size: 276.00105pt x 276.0139pt.
+File: univariada-summaryDatos.pdf Graphic file (type pdf)
+<use univariada-summaryDatos.pdf>
+Package pdftex.def Info: univariada-summaryDatos.pdf  used on input line 33.
+(pdftex.def)             Requested size: 276.00105pt x 276.0139pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: univariada-summaryDatos.pdf Graphic file (type pdf)
+<use univariada-summaryDatos.pdf>
+Package pdftex.def Info: univariada-summaryDatos.pdf  used on input line 39.
+(pdftex.def)             Requested size: 276.00105pt x 276.0139pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<univariada-rehacerhistogramas.pdf, id=15, 433.62pt x 433.62pt>
+File: univariada-rehacerhistogramas.pdf Graphic file (type pdf)
+<use univariada-rehacerhistogramas.pdf>
+Package pdftex.def Info: univariada-rehacerhistogramas.pdf  used on input line 
+46.
+(pdftex.def)             Requested size: 276.00105pt x 276.0139pt.
 )
-LaTeX Font Info:    Try loading font information for TS1+cmtt on input line 9.
 
-("D:\Program Filesx86\MikTex\tex\latex\base\ts1cmtt.fd"
-File: ts1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `TS1/aett/m/n' in size <10> not available
-(Font)              Font shape `TS1/cmtt/m/n' tried instead on input line 9.
-) [2
+LaTeX Warning: `h' float specifier changed to `ht'.
 
-] (bivariada.tex)
-[3
+[2
 
-] (Modelos_regresion.tex) [4
+ <./univariada-summaryDatos.pdf>] [3] [4] [5 <./univariada-rehacerhistogramas.p
+df>] (bivariada.tex
+<bivariada-corrPlotX.pdf, id=40, 433.62pt x 433.62pt>
+File: bivariada-corrPlotX.pdf Graphic file (type pdf)
+<use bivariada-corrPlotX.pdf>
+Package pdftex.def Info: bivariada-corrPlotX.pdf  used on input line 47.
+(pdftex.def)             Requested size: 276.00105pt x 276.0139pt.
+ [6
+
+ <./bivariada-corrPlotX.pdf>]) (Modelos_regresion.tex)
+[7
+
 
 ] (ProyectoFinal.bbl) (ProyectoFinal.aux) ) 
 Here is how much of TeX's memory you used:
- 4481 strings out of 493305
- 62850 string characters out of 3139306
- 119602 words of memory out of 3000000
- 7887 multiletter control sequences out of 15000+200000
- 27621 words of font info for 59 fonts, out of 3000000 for 9000
+ 4477 strings out of 493305
+ 62762 string characters out of 3139306
+ 119666 words of memory out of 3000000
+ 7890 multiletter control sequences out of 15000+200000
+ 26477 words of font info for 55 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,4n,37p,624b,309s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\david\AppData\Local\MiKTe
-X\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\tctt1000.pk><D:/Program Filesx86/MikTe
-x/fonts/type1/public/amsfonts/cm/cmbx12.pfb><D:/Program Filesx86/MikTex/fonts/t
-ype1/public/amsfonts/cm/cmbx9.pfb><D:/Program Filesx86/MikTex/fonts/type1/publi
-c/amsfonts/cm/cmr10.pfb><D:/Program Filesx86/MikTex/fonts/type1/public/amsfonts
-/cm/cmr12.pfb><D:/Program Filesx86/MikTex/fonts/type1/public/amsfonts/cm/cmr17.
-pfb><D:/Program Filesx86/MikTex/fonts/type1/public/amsfonts/cm/cmr7.pfb><D:/Pro
-gram Filesx86/MikTex/fonts/type1/public/amsfonts/cm/cmr9.pfb><D:/Program Filesx
-86/MikTex/fonts/type1/public/amsfonts/cm/cmtt10.pfb><D:/Program Filesx86/MikTex
-/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on ProyectoFinal.pdf (4 pages, 116772 bytes).
+ 41i,8n,37p,624b,358s stack positions out of 5000i,500n,10000p,200000b,50000s
+<D:/Program Filesx86/MikTex/fonts/ty
+pe1/public/amsfonts/cm/cmbx12.pfb><D:/Program Filesx86/MikTex/fonts/type1/publi
+c/amsfonts/cm/cmbx9.pfb><D:/Program Filesx86/MikTex/fonts/type1/public/amsfonts
+/cm/cmmi10.pfb><D:/Program Filesx86/MikTex/fonts/type1/public/amsfonts/cm/cmr10
+.pfb><D:/Program Filesx86/MikTex/fonts/type1/public/amsfonts/cm/cmr12.pfb><D:/P
+rogram Filesx86/MikTex/fonts/type1/public/amsfonts/cm/cmr17.pfb><D:/Program Fil
+esx86/MikTex/fonts/type1/public/amsfonts/cm/cmr7.pfb><D:/Program Filesx86/MikTe
+x/fonts/type1/public/amsfonts/cm/cmr9.pfb><D:/Program Filesx86/MikTex/fonts/typ
+e1/public/amsfonts/cm/cmtt9.pfb>
+Output written on ProyectoFinal.pdf (7 pages, 127292 bytes).
 PDF statistics:
- 57 PDF objects out of 1000 (max. 8388607)
+ 84 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 5 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 20 words of extra memory for PDF output out of 10000 (max. 10000000)
 

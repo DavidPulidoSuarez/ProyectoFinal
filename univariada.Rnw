@@ -1,43 +1,66 @@
+<<getData, echo=FALSE>>=
+# carga de datos
+library(stargazer)
+filename="colombia.csv"
+colb=read.csv(filename, stringsAsFactors = FALSE)
+#str(colb)
+@
+
+
 \section{Exploración Univariada}\label{univariada}
 
 En esta sección exploro cada índice. En esta sección exploro cada índice. En esta sección exploro cada índice. En esta sección exploro cada índice. En esta sección exploro cada índice. En esta sección exploro cada índice. En esta sección exploro cada índice. En esta sección exploro cada índice. En esta sección exploro cada índice.
 
-
-
-<<getData, echo=FALSE>>=
-# carga de datos
-filename="colombia.csv"
-colb=read.csv(filename, stringsAsFactors = FALSE)
-str(colb)
+<<summaryDatos, echo=FALSE,results=tex>>=
+#x=summary(colb)
+stargazer(colb,title = "Medidas estadísticas", label = "stats")
+#str(summary(colb))
 @
 
-veamos que pasa aqui
-<<summaryDatos, echo=FALSE>>=
-summary(colb)
+\begin{figure}[h]
+\centering
+<<summaryDatos, echo=FALSE,fig=TRUE>>=
+title='Indice de Desarrollo Humano en Colombia'
+paleta='red'
+hist(colb$IDH,main=title,col=paleta,ylim = c(0,14),ylab = "Frecuencia",xlab="IDH")
 @
-histograma 1 
-<<summaryDatos, echo=FALSE>>=
-hist(colb$IDH)
+\caption{Histograma del IDH en Colombia para los 32 departamentos}
+\label{barplot1}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+<<summaryDatos, echo=FALSE,fig=TRUE>>=
+title='Poblacion en Colombia departamentos de cabecera'
+paleta='red'
+hist(colb$Poblacion.Cabecera,main=title,col=paleta,ylim = c(0,30),ylab = "Frecuencia",xlab="Poblacion")
 @
-histograma 2
-<<summaryDatos, echo=FALSE>>=
-hist(colb$Poblacion.Cabecera)
+\caption{Histograma de la poblacion en Colombia para los departamentos de cabecera}
+\label{barplot2}
+\end{figure}
+\begin{figure}[h]
+\centering
+<<summaryDatos, echo=FALSE,fig=TRUE>>=
+title='Poblacion en Colombia otros departamentos'
+paleta='red'
+hist(colb$Poblacion.Resto,main=title,col=paleta,ylim = c(0,15),ylab = "Frecuencia",xlab="Poblacion")
 @
-histograma 3
-<<summaryDatos, echo=FALSE>>=
-hist(colb$Poblacion.Resto)
-@
+\caption{Histograma de la poblacion en Colombia para los otros departamentos}
+\label{barplot3}
+\end{figure}
 Para conocer el comportamiento de las variables se ha preparado la Tabla %\ref{Tfrecuencias}, donde se describe la distribución de las modalidades de cada variable. Los números representan la situación de algun país en ese indicador, donde el mayor valor numérico es la mejor situación.
-
-<<rehacerhistogramas, echo=FALSE>>=
+\begin{figure}[h]
+\centering
+<<rehacerhistogramas, echo=FALSE,fig=TRUE>>=
+par(mfrow=c(2,1))
 colb$cabeLog=log(colb$Poblacion.Cabecera)
 colb$restoLog=log(colb$Poblacion.Resto)
-
-hist(colb$cabeLog)
-hist(colb$restoLog)
+title='Poblacion en Colombia departamentos de cabecera'
+paleta='red'
+hist(colb$cabeLog,main=title,col=paleta,ylim = c(0,20),ylab = "Frecuencia",xlab="Poblacion")
+title='Poblacion en Colombia otros departamentos'
+hist(colb$restoLog,main=title,col=paleta,ylim = c(0,10),ylab = "Frecuencia",xlab="Poblacion")
 @
-
-
-
-
-\endinput
+\caption{Histograma transformado de la poblacion en Colombia para los 32 departamentos}
+\label{barplot4}
+\end{figure}
