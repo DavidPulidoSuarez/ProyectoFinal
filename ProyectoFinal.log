@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.6.28)  29 JUN 2018 20:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.6.28)  29 JUN 2018 21:14
 entering extended mode
 **./ProyectoFinal.tex
 (ProyectoFinal.tex
@@ -800,7 +800,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.10 ...ra los datos de departamentos de cabecera}
+l.12 ...ra los datos de departamentos de cabecera}
                                                   
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -814,7 +814,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.10 ...ra los datos de departamentos de cabecera}
+l.12 ...ra los datos de departamentos de cabecera}
                                                   
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -828,7 +828,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.39 ...para los datos de todos los departamentos}
+l.41 ...para los datos de todos los departamentos}
                                                   
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -837,7 +837,7 @@ or  <return>  to continue without it.
 <Modelos_regresion-plotMap1.pdf, id=51, 433.62pt x 433.62pt>
 File: Modelos_regresion-plotMap1.pdf Graphic file (type pdf)
 <use Modelos_regresion-plotMap1.pdf>
-Package pdftex.def Info: Modelos_regresion-plotMap1.pdf  used on input line 91.
+Package pdftex.def Info: Modelos_regresion-plotMap1.pdf  used on input line 93.
 
 (pdftex.def)             Requested size: 276.00105pt x 276.0139pt.
 ) [7
@@ -869,7 +869,7 @@ ram Filesx86/MikTex/fonts/type1/public/amsfonts/cm/cmsy7.pfb><D:/Program Filesx
 86/MikTex/fonts/type1/public/amsfonts/cm/cmti10.pfb><D:/Program Filesx86/MikTex
 /fonts/type1/public/amsfonts/cm/cmtt10.pfb><D:/Program Filesx86/MikTex/fonts/ty
 pe1/public/amsfonts/cm/cmtt9.pfb>
-Output written on ProyectoFinal.pdf (9 pages, 721500 bytes).
+Output written on ProyectoFinal.pdf (9 pages, 721415 bytes).
 PDF statistics:
  112 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

@@ -66,7 +66,7 @@ colb$restoLog=log(colb$Poblacion.Resto)
 
 Finalmente, vemos los modelos propuestos. Primero sin la libertad mundial como independiente, y luego con est√°. Los resultados se muestran en la Tabla %\ref{regresiones} de la p√°gina \pageref{regresiones}.
 
-<<summaryDatos, echo=>>=
+<<summaryDatos, echo=FALSE>>=
 LinRegA = lm(IDH ~ ., data = colb[,c(1,7)])
 LinRegB = lm(IDH ~ ., data = colb[,c(1,7:8)])
 
@@ -89,7 +89,7 @@ stargazer(LinRegB,title = "Modelo de regresiÛn propuesto para los datos de todos
 
 
 Como se vio en la Tabla %\ref{regresiones}, cuando est√° presente el \emph{indice de libertad mundial}, el \emph{√?ndice de libertad de prensa} pierde significancia.
-<<previousCode, results=hide, echo=FALSE >>=
+<<previousCode, echo=FALSE >>=
 # Exploracion Espacial ----------------------------------------------------
 
 #Calculemos conglomerados de regiones,
