@@ -21,15 +21,15 @@ summary(colb)
 # el plot de cada uno seria el histograma:
 
 hist(colb$IDH)
-hist(colb$Población.Cabecera)
-hist(colb$Población.Resto)
+hist(colb$Poblacion.Cabecera)
+hist(colb$Poblacion.Resto)
 
 # dado el sesgo de las pobaciones, 
 # podriamos transformarla para que se acerque a la 
 # normalidad
 
-colb$cabeLog=log(colb$Población.Cabecera)
-colb$restoLog=log(colb$Población.Resto)
+colb$cabeLog=log(colb$Poblacion.Cabecera)
+colb$restoLog=log(colb$Poblacion.Resto)
 
 hist(colb$cabeLog)
 hist(colb$restoLog)
@@ -48,7 +48,7 @@ corrDem
 
     
     
-# y la correlación entre las variables independientes:
+# y la correlacion entre las variables independientes:
     
 corrTableX=round(cor(colb[,explanans],
                          use = "na.or.complete"),2)
@@ -63,7 +63,7 @@ corrTableX
 plot(colb[,explanans])
 
 
-# Modelos de Regresión ----------------------------------------------------
+# Modelos de Regresion ----------------------------------------------------
 
 # Veamos los modelos propuestos. 
 # Primero sin poblacion resto, luego con esa:
@@ -77,10 +77,10 @@ summary(LinRegB)
 
 
 
-# Exploración Espacial ----------------------------------------------------
+# Exploracion Espacial ----------------------------------------------------
 
 #Calculemos conglomerados de regiones,
-#usando toda la información de las tres variables.
+#usando toda la informacion de las tres variables.
 # usaremos la tecnica de k-means propuesta por MacQueen.
 
 
