@@ -1,26 +1,23 @@
+En esta secci\'on se analiza cada \'indice. Morbi accumsan nec est ut malesuada. Donec metus augue, commodo eget leo et, sodales vulputate libero. Donec eu sollicitudin ligula. Quisque tempor, tellus ultricies vestibulum suscipit, leo dui porta lectus, sed viverra quam est vitae nunc. In vehicula risus ac nibh tempor vehicula. Donec ut finibus nisi, non ullamcorper neque. Vivamus eget viverra metus. Sed hendrerit ipsum porta tellus condimentum facilisis. Nulla eros neque, commodo at tincidunt vitae, fringilla nec nunc. Pellentesque eleifend suscipit ipsum vitae efficitur. Aenean at sem et mi ultrices faucibus en la Tabla \ref{stats}.
 
-
-\section{Exploración Univariada}\label{univariada}
-
-En esta sección exploro cada índice. En esta sección exploro cada índice. En esta sección exploro cada índice. En esta sección exploro cada índice. En esta sección exploro cada índice. En esta sección exploro cada índice. En esta sección exploro cada índice. En esta sección exploro cada índice. En esta sección exploro cada índice.
 
 % Table created by stargazer v.5.2.2 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
-% Date and time: vie., jun. 29, 2018 - 8:06:41 p.m.
+% Date and time: jue., jul. 05, 2018 - 3:51:19 p.m.
 \begin{table}[!htbp] \centering 
-  \caption{Medidas estadísticas} 
+  \caption{Medidas estadisticas de los datos} 
   \label{stats} 
-\begin{tabular}{@{\extracolsep{5pt}}lccccccc} 
+\begin{tabular}{@{\extracolsep{5pt}}lccccc} 
 \\[-1.8ex]\hline 
 \hline \\[-1.8ex] 
-Statistic & \multicolumn{1}{c}{N} & \multicolumn{1}{c}{Mean} & \multicolumn{1}{c}{St. Dev.} & \multicolumn{1}{c}{Min} & \multicolumn{1}{c}{Pctl(25)} & \multicolumn{1}{c}{Pctl(75)} & \multicolumn{1}{c}{Max} \\ 
+Statistic & \multicolumn{1}{c}{N} & \multicolumn{1}{c}{Mean} & \multicolumn{1}{c}{Median} & \multicolumn{1}{c}{Min} & \multicolumn{1}{c}{Max} \\ 
 \hline \\[-1.8ex] 
-IDH & 32 & 0.802 & 0.042 & 0.691 & 0.768 & 0.834 & 0.879 \\ 
-Poblacion.Cabecera & 32 & 1,196,730.000 & 1,982,287.000 & 13,090 & 234,624.2 & 970,925.2 & 10,070,801 \\ 
-Poblacion.Resto & 32 & 360,590.300 & 331,887.600 & 21,926 & 96,968.8 & 487,529.5 & 1,428,858 \\ 
-Poblacion.Total & 32 & 1,557,320.000 & 2,202,522.000 & 43,446 & 371,160.8 & 1,512,087 & 10,985,285 \\ 
+IDH & 32 & 0.802 & 0.804 & 0.691 & 0.879 \\ 
+Poblacion.Cabecera & 32 & 1,196,730.000 & 717,197 & 13,090 & 10,070,801 \\ 
+Poblacion.Resto & 32 & 360,590.300 & 268,111.5 & 21,926 & 1,428,858 \\ 
+Poblacion.Total & 32 & 1,557,320.000 & 1,028,429 & 43,446 & 10,985,285 \\ 
 \hline \\[-1.8ex] 
 \end{tabular} 
-\end{table} 
+\end{table} A continuaci\'on se muestra el histograma para el \'indice de desarrollo humano en Colombia. (Ver figura \ref{barplot1})
 \begin{figure}[h]
 \centering
 \includegraphics{univariada-summaryDatos}
@@ -28,6 +25,8 @@ Poblacion.Total & 32 & 1,557,320.000 & 2,202,522.000 & 43,446 & 371,160.8 & 1,51
 \label{barplot1}
 \end{figure}
 
+En la figura \ref{barplot2} se muestra el histograma para la cantidad de habitantes en los departamentos de cabecera, mientras que en la figura \ref{barplot3} se muestra la poblaci\'on para el resto de departamentos.
+ 
 \begin{figure}[h]
 \centering
 \includegraphics{univariada-summaryDatos}
@@ -40,9 +39,12 @@ Poblacion.Total & 32 & 1,557,320.000 & 2,202,522.000 & 43,446 & 371,160.8 & 1,51
 \caption{Histograma de la poblacion en Colombia para los otros departamentos}
 \label{barplot3}
 \end{figure}
-Para conocer el comportamiento de las variables se ha preparado la Tabla %\ref{Tfrecuencias}, donde se describe la distribución de las modalidades de cada variable. Los números representan la situación de algun país en ese indicador, donde el mayor valor numérico es la mejor situación.
+Los histogramas de los datos del indice se muestran en las figuras 
 \begin{figure}[h]
 \centering
+
+dado el sesgo de las poblaciones, se realiza una transformaci�n de tal manera que se acerque a la realidad. En la figura \ref{barplot4} se muestra el resultado de esta transformaci\'on.
+
 \includegraphics{univariada-rehacerhistogramas}
 \caption{Histograma transformado de la poblacion en Colombia para los 32 departamentos}
 \label{barplot4}

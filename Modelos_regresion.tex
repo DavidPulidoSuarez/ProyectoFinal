@@ -1,16 +1,16 @@
 
 \section{Modelos de Regresion}
 
-Finalmente, vemos los modelos propuestos. Primero sin la libertad mundial como independiente, y luego con estÃ¡. Los resultados se muestran en la Tabla %\ref{regresiones} de la pÃ¡gina \pageref{regresiones}.
+Finalmente, vemos los modelos propuestos. Primero sin la libertad mundial como independiente, y luego con est\'a. Los resultados se muestran en la tablasabla \ref{regresiones} y \ref{regresiones1} de la pÃgina \pageref{regresiones}.
 
 
 
 
 % Table created by stargazer v.5.2.2 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
-% Date and time: vie., jun. 29, 2018 - 9:13:58 p.m.
+% Date and time: jue., jul. 05, 2018 - 9:55:51 p.m.
 \begin{table}[!htbp] \centering 
   \caption{Modelo de regresión propuesto para los datos de departamentos de cabecera} 
-  \label{stats} 
+  \label{regresiones} 
 \begin{tabular}{@{\extracolsep{5pt}}lc} 
 \\[-1.8ex]\hline 
 \hline \\[-1.8ex] 
@@ -36,10 +36,10 @@ F Statistic & 9.347$^{***}$ (df = 1; 30) \\
 \end{tabular} 
 \end{table} 
 % Table created by stargazer v.5.2.2 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
-% Date and time: vie., jun. 29, 2018 - 9:13:58 p.m.
+% Date and time: jue., jul. 05, 2018 - 9:55:51 p.m.
 \begin{table}[!htbp] \centering 
   \caption{Modelo de regresión propuesto para los datos de todos los departamentos} 
-  \label{stats} 
+  \label{regresiones1} 
 \begin{tabular}{@{\extracolsep{5pt}}lc} 
 \\[-1.8ex]\hline 
 \hline \\[-1.8ex] 
@@ -69,25 +69,32 @@ F Statistic & 10.706$^{***}$ (df = 2; 29) \\
 \end{table} 
 
 
-Como se vio en la Tabla %\ref{regresiones}, cuando estÃ¡ presente el \emph{indice de libertad mundial}, el \emph{Ã?ndice de libertad de prensa} pierde significancia.
+\section{Exploraci\'on espacial}
+
 \begin{Schunk}
 \begin{Soutput}
 OGR data source with driver: ESRI Shapefile 
-Source: "D:\Documentos\Repositorios\ProyectoFinal\COL_maps\COL_adm1.shp", layer: "COL_adm1"
+Source: "D:\Repositorios\ProyectoFinal\COL_maps\COL_adm1.shp", layer: "COL_adm1"
 with 32 features
 It has 9 fields
 Integer64 fields read as strings:  ID_0 ID_1 
 \end{Soutput}
-\begin{Soutput}
-[1] 1 3 2
-\end{Soutput}
+\end{Schunk}
+
+\begin{Schunk}
 \begin{Soutput}
   Group.1       IDH  cabeLog restoLog
-1       1 0.7607000 11.24731 11.25763
-2       2 0.8175455 13.42100 12.10201
-3       3 0.8235455 14.27185 13.42408
+1       1 0.7560000 13.05663 12.80485
+2       2 0.7825714 10.58974 10.60684
+3       3 0.8313529 14.03019 12.74569
 \end{Soutput}
 \end{Schunk}
+Como acabamos de ver en la Tabla \ref{regresiones} en la página \pageref{regresiones}, si quisieras sintetizar la multidimensionalidad de nuestros indicadores, podríamos usar tres de las cuatro variables que tenemos (un par de las originales tiene demasiada correlación). 
+
+Así, propongo que calculemos conglomerados de departamentos usando toda la información de tres de los indicadores. Como nuestras variables son ordinales utilizaremos un proceso de conglomeración usando la tecnica de k-means propuesta por.El resultado de este proceso se muestra en la Figura \ref{mapa}. %\textbf{\cite{macqueen_methods}}
+
+
+
 \begin{figure}
 \centering
 \includegraphics{Modelos_regresion-plotMap1}

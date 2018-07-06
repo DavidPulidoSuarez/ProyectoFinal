@@ -1,3 +1,5 @@
+En esta secci\'on se analiza cada \'indice. Morbi accumsan nec est ut malesuada. Donec metus augue, commodo eget leo et, sodales vulputate libero. Donec eu sollicitudin ligula. Quisque tempor, tellus ultricies vestibulum suscipit, leo dui porta lectus, sed viverra quam est vitae nunc. In vehicula risus ac nibh tempor vehicula. Donec ut finibus nisi, non ullamcorper neque. Vivamus eget viverra metus. Sed hendrerit ipsum porta tellus condimentum facilisis. Nulla eros neque, commodo at tincidunt vitae, fringilla nec nunc. Pellentesque eleifend suscipit ipsum vitae efficitur. Aenean at sem et mi ultrices faucibus en la Tabla \ref{stats}.
+
 <<getData, echo=FALSE>>=
 # carga de datos
 library(stargazer)
@@ -6,28 +8,25 @@ colb=read.csv(filename, stringsAsFactors = FALSE)
 #str(colb)
 @
 
-
-\section{Exploración Univariada}\label{univariada}
-
-En esta sección exploro cada índice. En esta sección exploro cada índice. En esta sección exploro cada índice. En esta sección exploro cada índice. En esta sección exploro cada índice. En esta sección exploro cada índice. En esta sección exploro cada índice. En esta sección exploro cada índice. En esta sección exploro cada índice.
-
 <<summaryDatos, echo=FALSE,results=tex>>=
 #x=summary(colb)
-stargazer(colb,title = "Medidas estadísticas", label = "stats")
+stargazer(colb,title = "Medidas estadisticas de los datos", label = "stats", summary.stat = c("n", "mean", "median", "min", "max"))
 #str(summary(colb))
 @
-
+A continuaci\'on se muestra el histograma para el \'indice de desarrollo humano en Colombia. (Ver figura \ref{barplot1})
 \begin{figure}[h]
 \centering
 <<summaryDatos, echo=FALSE,fig=TRUE>>=
 title='Indice de Desarrollo Humano en Colombia'
-paleta='red'
+paleta='green'
 hist(colb$IDH,main=title,col=paleta,ylim = c(0,14),ylab = "Frecuencia",xlab="IDH")
 @
 \caption{Histograma del IDH en Colombia para los 32 departamentos}
 \label{barplot1}
 \end{figure}
 
+En la figura \ref{barplot2} se muestra el histograma para la cantidad de habitantes en los departamentos de cabecera, mientras que en la figura \ref{barplot3} se muestra la poblaci\'on para el resto de departamentos.
+ 
 \begin{figure}[h]
 \centering
 <<summaryDatos, echo=FALSE,fig=TRUE>>=
@@ -42,15 +41,18 @@ hist(colb$Poblacion.Cabecera,main=title,col=paleta,ylim = c(0,30),ylab = "Frecue
 \centering
 <<summaryDatos, echo=FALSE,fig=TRUE>>=
 title='Poblacion en Colombia otros departamentos'
-paleta='red'
+paleta='blue'
 hist(colb$Poblacion.Resto,main=title,col=paleta,ylim = c(0,15),ylab = "Frecuencia",xlab="Poblacion")
 @
 \caption{Histograma de la poblacion en Colombia para los otros departamentos}
 \label{barplot3}
 \end{figure}
-Para conocer el comportamiento de las variables se ha preparado la Tabla %\ref{Tfrecuencias}, donde se describe la distribución de las modalidades de cada variable. Los números representan la situación de algun país en ese indicador, donde el mayor valor numérico es la mejor situación.
+Los histogramas de los datos del indice se muestran en las figuras 
 \begin{figure}[h]
 \centering
+
+dado el sesgo de las poblaciones, se realiza una transformaci�n de tal manera que se acerque a la realidad. En la figura \ref{barplot4} se muestra el resultado de esta transformaci\'on.
+
 <<rehacerhistogramas, echo=FALSE,fig=TRUE>>=
 par(mfrow=c(2,1))
 colb$cabeLog=log(colb$Poblacion.Cabecera)

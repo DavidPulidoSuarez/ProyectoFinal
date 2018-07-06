@@ -1,0 +1,42 @@
+<<INICIO, echo=FALSE>>=
+# NO OLVIDAR set working directory
+library(stargazer)#carga la libreria para generar la tabla
+
+filename="colombia.csv"
+colb=read.csv(filename, stringsAsFactors = FALSE)
+colb$cabeLog=log(colb$Poblacion.Cabecera)
+colb$restoLog=log(colb$Poblacion.Resto)
+@
+
+\section{Exploraci\'on Bivariada}
+
+En este trabajo estamos interesados en el impacto de la cantidad de habitantes en el \'indice de desarrollo humano. Veamos las relaciones bivariadas que tiene esta variable con todas las dem\'as:
+
+
+<<corrTableX, results=tex, echo=FALSE>>=
+explanans=names(colb)[c(7:8)] # usando las logs
+corrDem=cor(colb$IDH,colb[,explanans],use = "na.or.complete")
+stargazer(corrDem, title="Correlacion del IDH con la poblacion",label = "corrDem")
+@
+
+Veamos la correlaci\'on entre las variables independientes:
+
+<<corrTableX, results=tex, echo=FALSE>>=
+corrTableX=round(cor(colb[,explanans],
+                         use = "na.or.complete"),2)
+corrTableX_copy=corrTableX
+corrTableX[upper.tri(corrTableX)]<-""
+stargazer(corrTableX, title="Correlacion entre variables independientes",label = 'corrTableX')
+@
+
+Lo visto en la Tabla \ref{corrTableX} se refuerza claramente en las figuras \ref{corrPlot} y \ref{corrPlotX}.
+
+\begin{figure}[h]
+\centering
+<<corrPlotX, echo=FALSE,fig=TRUE>>=
+plot(colb[,explanans],col = "red",xlab = "log(cabecera)",ylab = "log(resto)")
+@
+\caption{correlacion entre predictores}
+\label{corrPlot}
+\end{figure}
+\endinput

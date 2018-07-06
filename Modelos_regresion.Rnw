@@ -64,7 +64,7 @@ colb$restoLog=log(colb$Poblacion.Resto)
 
 \section{Modelos de Regresion}
 
-Finalmente, vemos los modelos propuestos. Primero sin la libertad mundial como independiente, y luego con estÃ¡. Los resultados se muestran en la Tabla %\ref{regresiones} de la pÃ¡gina \pageref{regresiones}.
+Finalmente, vemos los modelos propuestos. Primero sin la libertad mundial como independiente, y luego con est\'a. Los resultados se muestran en la tablasabla \ref{regresiones} y \ref{regresiones1} de la pÃgina \pageref{regresiones}.
 
 <<summaryDatos, echo=FALSE>>=
 LinRegA = lm(IDH ~ ., data = colb[,c(1,7)])
@@ -76,19 +76,20 @@ LinRegB = lm(IDH ~ ., data = colb[,c(1,7:8)])
 
 <<summaryDatos, results=tex, echo=FALSE>>=
 #resultados
-stargazer(LinRegA,title = "Modelo de regresión propuesto para los datos de departamentos de cabecera", label = "stats")
+stargazer(LinRegA,title = "Modelo de regresión propuesto para los datos de departamentos de cabecera", label = "regresiones")
 #str(summary(colb))
 @
 
 <<summaryDatos, results=tex, echo=FALSE>>=
 #resultados
-stargazer(LinRegB,title = "Modelo de regresión propuesto para los datos de todos los departamentos", label = "stats")
+stargazer(LinRegB,title = "Modelo de regresión propuesto para los datos de todos los departamentos", label = "regresiones1")
 #str(summary(colb))
 @
 
 
 
-Como se vio en la Tabla %\ref{regresiones}, cuando estÃ¡ presente el \emph{indice de libertad mundial}, el \emph{Ã?ndice de libertad de prensa} pierde significancia.
+\section{Exploraci\'on espacial}
+
 <<previousCode, echo=FALSE >>=
 # Exploracion Espacial ----------------------------------------------------
 
@@ -159,7 +160,10 @@ varToPLot=mapCol_idh$cluster
 
 # decidir color:
 #aca saca algo
-unique(varToPLot)
+#unique(varToPLot)
+@
+
+<<previousCodelala, echo=FALSE >>=
 aggregate(mapCol_idh@data[,c(10,11,12)],
           by=list(mapCol_idh@data$cluster),FUN=mean)
 
@@ -168,6 +172,12 @@ numberOfClasses = length(unique(varToPLot))
 colorForScale='Set2'
 paleta = brewer.pal(numberOfClasses, colorForScale)
 @
+Como acabamos de ver en la Tabla \ref{regresiones} en la página \pageref{regresiones}, si quisieras sintetizar la multidimensionalidad de nuestros indicadores, podríamos usar tres de las cuatro variables que tenemos (un par de las originales tiene demasiada correlación). 
+
+Así, propongo que calculemos conglomerados de departamentos usando toda la información de tres de los indicadores. Como nuestras variables son ordinales utilizaremos un proceso de conglomeración usando la tecnica de k-means propuesta por.El resultado de este proceso se muestra en la Figura \ref{mapa}. %\textbf{\cite{macqueen_methods}}
+
+
+
 \begin{figure}
 \centering
 <<plotMap1, echo=FALSE, fig=TRUE>>=
