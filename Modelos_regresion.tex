@@ -1,15 +1,9 @@
-
 \section{Modelos de Regresion}
 
-Finalmente, vemos los modelos propuestos. Primero sin la libertad mundial como independiente, y luego con est\'a. Los resultados se muestran en la tablasabla \ref{regresiones} y \ref{regresiones1} de la pÃgina \pageref{regresiones}.
+Finalmente, vemos los modelos propuestos. Primero sin la libertad mundial como independiente, y luego con est\'a. Los resultados se muestran en la tablas \ref{regresiones} y \ref{regresiones1} de la p\'agina \pageref{regresiones} y \pageref{regresiones1}.
 
-
-
-
-% Table created by stargazer v.5.2.2 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
-% Date and time: jue., jul. 05, 2018 - 9:55:51 p.m.
-\begin{table}[!htbp] \centering 
-  \caption{Modelo de regresión propuesto para los datos de departamentos de cabecera} 
+\begin{table}[H] \centering 
+  \caption{Modelo de regresi\'on propuesto para los datos de departamentos de cabecera} 
   \label{regresiones} 
 \begin{tabular}{@{\extracolsep{5pt}}lc} 
 \\[-1.8ex]\hline 
@@ -35,10 +29,13 @@ F Statistic & 9.347$^{***}$ (df = 1; 30) \\
 \textit{Note:}  & \multicolumn{1}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
 \end{tabular} 
 \end{table} 
-% Table created by stargazer v.5.2.2 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
-% Date and time: jue., jul. 05, 2018 - 9:55:51 p.m.
-\begin{table}[!htbp] \centering 
-  \caption{Modelo de regresión propuesto para los datos de todos los departamentos} 
+
+Cras mattis, quam cursus pellentesque efficitur, metus nisi pharetra ipsum, blandit bibendum purus lacus nec enim. Vestibulum leo dui, ultrices et nibh a, accumsan finibus elit. Duis pellentesque ligula a justo volutpat dapibus. Donec in ligula eget ante aliquet convallis. Curabitur placerat nisi at justo euismod elementum. Fusce tristique risus pulvinar turpis interdum ultrices. Vivamus luctus congue dapibus. Nullam et commodo metus. Aenean tincidunt consequat mattis. Nunc ut lectus tempor, pretium nisi quis, pulvinar nisl. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam egestas feugiat turpis congue ullamcorper. Maecenas porta pulvinar erat a aliquet. Mauris scelerisque nibh quis bibendum dictum. Mauris at fringilla leo, vel dapibus ipsum. Pellentesque sit amet ex iaculis elit blandit lobortis.
+
+Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin mauris enim, interdum a tristique in, sagittis nec turpis. Sed in tristique felis, vitae tempus urna. Nulla facilisi. Ut pellentesque libero quis vulputate porta. Cras vitae risus est. In hac habitasse platea dictumst.
+
+\begin{table}[H] \centering 
+  \caption{Modelo de regresi\'on propuesto para los datos de todos los departamentos} 
   \label{regresiones1} 
 \begin{tabular}{@{\extracolsep{5pt}}lc} 
 \\[-1.8ex]\hline 
@@ -68,36 +65,16 @@ F Statistic & 10.706$^{***}$ (df = 2; 29) \\
 \end{tabular} 
 \end{table} 
 
-
+\clearpage
 \section{Exploraci\'on espacial}
 
-\begin{Schunk}
-\begin{Soutput}
-OGR data source with driver: ESRI Shapefile 
-Source: "D:\Repositorios\ProyectoFinal\COL_maps\COL_adm1.shp", layer: "COL_adm1"
-with 32 features
-It has 9 fields
-Integer64 fields read as strings:  ID_0 ID_1 
-\end{Soutput}
-\end{Schunk}
+Como acabamos de ver en la Tabla \ref{regresiones} en la p\'agina \pageref{regresiones}, si quisieras sintetizar la multidimensionalidad de nuestros indicadores, podr\'iamos usar tres de las cuatro variables que tenemos (un par de las originales tiene demasiada correlaci\'on). 
 
-\begin{Schunk}
-\begin{Soutput}
-  Group.1       IDH  cabeLog restoLog
-1       1 0.7560000 13.05663 12.80485
-2       2 0.7825714 10.58974 10.60684
-3       3 0.8313529 14.03019 12.74569
-\end{Soutput}
-\end{Schunk}
-Como acabamos de ver en la Tabla \ref{regresiones} en la página \pageref{regresiones}, si quisieras sintetizar la multidimensionalidad de nuestros indicadores, podríamos usar tres de las cuatro variables que tenemos (un par de las originales tiene demasiada correlación). 
+As\'i, propongo que calculemos conglomerados de departamentos usando toda la informaci\'on de tres de los indicadores. Como nuestras variables son ordinales utilizaremos un proceso de conglomeraci\'on usando la tecnica de k-means propuesta por \textbf{\cite{macqueen_methods_1966}}.El resultado de este proceso se muestra en la Figura \ref{mapa}. 
 
-Así, propongo que calculemos conglomerados de departamentos usando toda la información de tres de los indicadores. Como nuestras variables son ordinales utilizaremos un proceso de conglomeración usando la tecnica de k-means propuesta por.El resultado de este proceso se muestra en la Figura \ref{mapa}. %\textbf{\cite{macqueen_methods}}
-
-
-
-\begin{figure}
+\begin{figure}[H]
 \centering
-\includegraphics{Modelos_regresion-plotMap1}
+\includegraphics[width=\textwidth,trim={2cm 2cm 3cm 3cm},clip]{Modelos_regresion-plotMap1}
 \caption{Histograma del IDH en Colombia para los 32 departamentos}
 \label{mapa}
 \end{figure}
